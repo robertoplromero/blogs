@@ -15,26 +15,29 @@ class Alert2 extends Component
      */
     public function __construct($type = 'info')
     {
-            
-        switch($type){
-            case 'info':
-                $class = 'bg-blue-100 border border-blue-400 text-blue-700';
-            break;
-            case 'danger':
-                $class = 'bg-red-100 border border-red-400 text-red-700';
-            break;
-            case 'success':
-                $class = 'bg-green-100 border border-green-400 text-green-700';
-            break;
-            case 'warning':
-                $class = 'bg-yellow-100 border border-yellow-400 text-yellow-700';
-            break;
-            case 'dark':
-                $class = 'bg-gray-100 border border-gray-400 text-gray-700';
-            break;
-        }
-        $this->class = $class;
+            $class = '';
+            switch($type){
+                case 'info':
+                $class = 'bg-blue-500';
+                break;
+                case 'danger':
+                    $class = 'bg-red-500';
+                break;
+                case 'success':
+                    $class = 'bg-green-500';
+                break;
+                case 'warning':
+                    $class = 'bg-yellow-500';
+                break;
+                case 'dark':
+                    $class = 'bg-gray-800';
+                break;
+                default:
+                    $class = 'bg-gray-500';
+                break;
+            }
 
+            $this->class = $class;
     }
 
     /**
