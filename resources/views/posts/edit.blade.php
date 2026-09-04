@@ -20,7 +20,7 @@
         <div class="alert alert-danger">{{ $message }}</div>
     @enderror
     <br>
-    <label for="category">Categoría:</label>
+    <label for="category">Categoría:</lab el>
     <input type="text" name="category" id="category"  value="{{ old('category', $post->category) }}">
     @error('category')
         <div class="alert alert-danger">{{ $message }}</div>
