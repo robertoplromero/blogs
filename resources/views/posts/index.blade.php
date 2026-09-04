@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div role="alert">
+    {{-- <div role="alert">
         <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
             Danger
         </div>
@@ -19,14 +19,16 @@
         </x-slot>
         Esto es una alerta de error que tiene más drama de lo que realmente sucedió. 
     </x-alert2>
-    Hola, mundo
+    Hola, mundo --}}
 
-    <a href="/posts/create">Crear un post</a>
+    <h1>Posts</h1>
+
+    <a href="{{ route('posts.create') }}">Crear un post</a>
 
     <ul>
         @foreach ($posts as $post)
             <li>
-                <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                <a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a>
             </li>
         @endforeach
     </ul>

@@ -19,6 +19,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => fake()->sentence(),
+            'slug' => fake()->slug(),
             //'content' => fake()->paragraphs(3, true),
             'content' => fake()->text(1000),
             //'category' => fake()->randomElement(['Technology', 'Health', 'Lifestyle', 'Business', 'Entertainment']),
