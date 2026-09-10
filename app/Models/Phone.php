@@ -4,17 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class Phone extends Model
 {
-
     protected $fillable = [
-        'content',
-        'commentable_id',
-        'commentable_type'
+        'number', 
+        'phoneable_id',
+        'phoneable_type'
     ];
 
-    public function commentable(){
+    public function phoneable(){
         return $this->morphTo();
     }
-
+    
 }

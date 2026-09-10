@@ -41,4 +41,13 @@ class Post extends Model
         'content',
         'category',        
     ];
+
+    public function comments(){
+        // return $this->hasMany(Comment::class, 'post_id', 'id');
+        return $this->morphMany(Comment::class, 'commentable');
+    }
+
+    public function tags(){
+        return $this->belongsToMany(Tag::class, 'post_tag', 'post_id', 'tag_id');
+    }
 }
