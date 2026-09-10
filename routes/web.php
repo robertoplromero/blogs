@@ -15,6 +15,9 @@ Route::resource('posts', PostController::class);
 Route::get('prueba', function () {
    
     $post = Post::find(1);
-    return $post;    
+    // $post->tags()->detach([1, 2, 3]);
+    $post->tags()->sync([1, 4]);
+
+    return $post->tags;
    
 });
