@@ -14,13 +14,7 @@ Route::resource('posts', PostController::class);
 
 Route::get('prueba', function () {
    
-    // return $post = Post::first();
-    $post = Post::first();
-    $comment = Comment::create([
-        'content' => 'Comentario de prueba',
-        'commentable_id' => $post->id,
-        'commentable_type' => Post::class
-    ]);
-    return Comment::all();
+    $post = Post::find(1);
+    return $post;    
    
 });
